@@ -1,9 +1,17 @@
-var nombreDeLaVariable;
-let nombreDeLaVariable1;
-const nombreDeLaVariable2 = 'siempre definida/inicializada';
-let x, y, z;
-x = 1;
-y = 2;
-z = x + y; //ojito con la ubicacion de memoria,no recomendable
-
-document.getElementById('demostracion').innerHTML = 'texto transformado por JS'
+// Función para añadir valor a la pantalla
+function add(valor) {
+    document.getElementById('screen').value += valor;
+}
+// Función para borrar la pantalla
+function borrar() {
+    document.getElementById('screen').value = '';
+}
+// Función para calcular el resultado
+function calcular() {
+    // Obtener el valor de la pantalla
+    const screenValue = document.getElementById('screen').value;
+    // Evaluar la expresión en la pantalla y obtener el resultado
+    const resultado = eval(screenValue);
+    // Mostrar el resultado en la pantalla
+    document.getElementById('screen').value = resultado;
+}
